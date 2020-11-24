@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>ホーム</title>
+        <!--CSSファイルを読み込み -->
+
+    </head>
+
+    <body>
+        <div class="kakebo_home">
+            <!--ボタン作成-->
+            <button type="button" name="income_btn" value="income" class="home_btn" id="income_btn"><p>収入</p></button>
+            <button type="button" name="spend_btn" value="spending" class="home_btn" id="spending_btn"><p>支出</p></button>
+
+            <!--日付（変更できるがデフォルトでその日の日付）、用途（メモ的な）、金額（金額名は動的に設定）-->
+            <form id="KakeboForm_js">
+                <!-- 日付 （必須項目）-->
+                <input type="date" id="InpDate_js" class="kakebo_input" autocomplete="off" required>
+                <!-- 用途（任意項目） -->
+                <input type="text" id="InpUses_js" class="kakebo_input" placeholder="用途を入力（任意）" autocomplete="off">
+                <!--金額 （必須項目,円想定）-->
+                <input type="number" id="InpMoney_js" class="kakebo_inpuot" placeholder="金額を入力（必須）" autocomplete="off" required>
+            </form>
+
+            <!--動的なカテゴリリスト 現在初期値なし-->
+            <div class="category_list" id="CategoryList_js"></div>
+
+            <button type="button" name="fixed_btn" value="fixed" class="home_btn" id="fixed_btn"><p>入力を確定する</p></button>
+
+        </div>
+    </body>
+</html>
