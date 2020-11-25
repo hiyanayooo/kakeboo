@@ -14,23 +14,24 @@
             <button type="button" name="spend_btn" class="home_btn top_btn" id="SpendingBtn_js">支出</button>
 
             <!--日付（変更できるがデフォルトでその日の日付）、用途（メモ的な）、金額（金額名は動的に設定）-->
-            <form id="KakeboForm_js">
+            <form id="KakeboForm_js" action="" method="POST" name="kakebo_form">
                 <!-- 日付 （必須項目）-->
-                <input type="date" id="InpDate_js" class="kakebo_input" autocomplete="off" required>
+                <input type="date" id="InpDate_js" class="kakebo_input" name="Input" autocomplete="off" required>
                 <!-- 用途（任意項目） -->
-                <input type="text" id="InpUses_js" class="kakebo_input" placeholder="用途を入力（任意）" autocomplete="off">
+                <input type="text" id="InpUses_js" class="kakebo_input" name="Input" placeholder="用途を入力（任意）" autocomplete="off">
                 <!--金額 （必須項目,円想定）-->
-                <input type="number" id="InpMoney_js" class="kakebo_input" placeholder="金額を入力（必須）" autocomplete="off" required>
+                <input type="number" id="InpMoney_js" class="kakebo_input" name="Input" placeholder="金額を入力（必須）" autocomplete="off" required>
             </form>
 
             <!--動的なカテゴリリスト 現在初期値なし-->
             <p class="kategory">カテゴリ</p>
-            <form id="Kategory_form">
+            <form id="Kategory_form" action="./kategory_edit.html" >
                 <button type="button" name="kategory"  id="KategoryBtn_js" class="home_btn kategory_edit" >カテゴリを編集する</button>
             </form>
             <div class="kategory_list" id="KategoryList_js"></div>
 
-            <span><button type="button" name="fixed_btn" class="home_btn fixed_btn" id="fixed_btn">入力を確定する</button></span>
+            <form action="" method="POST"><button type="button" name="fixed_btn" class="home_btn fixed_btn" id="FixedBtn-js">入力を確定する</button></form>
         </div>
+        <script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
     </body>
 </html>
