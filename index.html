@@ -4,14 +4,14 @@
         <meta charset="utf-8">
         <title>ホーム</title>
         <!--CSSファイルを読み込み -->
-
+        <link rel="stylesheet" href="./main.css">
     </head>
 
     <body>
         <div class="kakebo_home">
             <!--ボタン作成-->
-            <button type="button" name="income_btn" class="home_btn" id="IncomeBtn_js"><p>収入</p></button>
-            <button type="button" name="spend_btn" class="home_btn" id="SpendingBtn_js"><p>支出</p></button>
+            <button type="button" name="income_btn" class="home_btn top_btn" id="IncomeBtn_js">収入</button>
+            <button type="button" name="spend_btn" class="home_btn top_btn" id="SpendingBtn_js">支出</button>
 
             <!--日付（変更できるがデフォルトでその日の日付）、用途（メモ的な）、金額（金額名は動的に設定）-->
             <form id="KakeboForm_js">
@@ -20,18 +20,17 @@
                 <!-- 用途（任意項目） -->
                 <input type="text" id="InpUses_js" class="kakebo_input" placeholder="用途を入力（任意）" autocomplete="off">
                 <!--金額 （必須項目,円想定）-->
-                <input type="number" id="InpMoney_js" class="kakebo_inpuot" placeholder="金額を入力（必須）" autocomplete="off" required>
+                <input type="number" id="InpMoney_js" class="kakebo_input" placeholder="金額を入力（必須）" autocomplete="off" required>
             </form>
 
             <!--動的なカテゴリリスト 現在初期値なし-->
             <p class="kategory">カテゴリ</p>
             <form id="Kategory_form">
-                <button type="button" name="kategory"  id="KategoryBtn_js" class="home_btn" ><p>カテゴリを編集する</p></button>
+                <button type="button" name="kategory"  id="KategoryBtn_js" class="home_btn kategory_edit" >カテゴリを編集する</button>
             </form>
-            <div class="category_list" id="CategoryList_js"></div>
+            <div class="kategory_list" id="KategoryList_js"></div>
 
-            <button type="button" name="fixed_btn" class="home_btn" id="fixed_btn"><p>入力を確定する</p></button>
-
+            <span><button type="button" name="fixed_btn" class="home_btn fixed_btn" id="fixed_btn">入力を確定する</button></span>
         </div>
     </body>
 </html>
