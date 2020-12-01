@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <!-- 最終的に値をセットするページ -->
+    <head>
+        <meta charset="utf-8">
+        <title>値セット</title>
+        <!--CSSファイルを読み込み -->
+        <link rel="stylesheet" href="./kategory_add.css">
+    </head>
+
+    <body>
+
+        <div id="KategoryAdd">
+            <!-- テキスト入力、img_list,color_listからの選択 -->
+            <form action=""><p>名前<input type="text" ></p></form>
+            <div id="ImgList_js"><!-- 動的なImgリストを配置 --></div>
+            <div id="ColorList_js"><!-- 動的なColorリスト--></div>
+        </div>
+
+        <!-- 保存ボタン クリックしたらカテゴリ編集画面へ -->
+        <form action="../kategory_edit/kategory_edit.html"><button id="KategorAddFixed">保存する</button></form>
+    </body>
+</html>
